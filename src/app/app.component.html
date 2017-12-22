@@ -11,8 +11,11 @@
       <!--app-server-element *ngFor="let serverElement of serverElements"
       [srvElement]="serverElement">
       </app-server-element-->
+
       <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
       <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+
+      <!--app-test></app-test-->
     </div>
   </div>
 </div>
