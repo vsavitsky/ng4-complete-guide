@@ -18,6 +18,7 @@ import { UnlessDirective } from './unless-directive/unless.directive';
 import { TestComponent } from './test/test.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { RecipeService } from './recipes/recipe.service';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import { RecipeService } from './recipes/recipe.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [RecipeService],
+  providers: [RecipeService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
