@@ -19,7 +19,14 @@ import { TestComponent } from './test/test.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { RecipeService } from './recipes/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+	{ path: '', component: AppComponent },
+	{ path: 'recipeList', component: RecipeListComponent },
+	{ path: 'recipes', component: RecipesComponent }
+];
 
 @NgModule({
   declarations: [
@@ -41,7 +48,8 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [RecipeService, ShoppingListService],
   bootstrap: [AppComponent]
